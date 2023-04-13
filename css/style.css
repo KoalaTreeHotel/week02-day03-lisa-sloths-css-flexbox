@@ -2,7 +2,7 @@
 :root {
   --palette-dark: #522555;
   --palette-meddark: #69306D;
-  --palette-med: #A5668B;
+  --palette-med: #c794b2;
   --palette-medlight: #D3BCC0;
   --palette-light: #F2D7EE;
   --palette-hover: #F7A1C4;
@@ -12,32 +12,40 @@
   --graydark: #6e6e69;
 
   --color-header: var(--palette-light);
-  --color-sidecol: var(--palette-med);
-  --color-maincol: var(--palette-medlight);
+  --color-leftcol: var(--palette-med);
+  --color-rightcol: var(--palette-medlight);
   --color-footer: var(--palette-light);
+  --color-nav: var(--palette-dark);
   --color-nav-hover: var(--palette-hover);
 }
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial;
+  font-family: "Montserrat", Helvetica, sans-serif;
   margin: 0;
-  background-color: var(--color-maincol);
+  background-color: var(--color-rightcol);
+}
+
+p {
+  font-family: "Merriweather", 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
 }
 
 header {
-  padding: 60px;
-  text-align: center;
+  padding: 20px 20px;
   background-color: var(--color-header);
   color: var(--black)
 }
 
 nav {
   display: flex;
-  background-color: var(--palette-dark);
+  background-color: var(--color-nav);
 }
 
 nav a {
@@ -57,20 +65,19 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: center;
 }
 
 /* Flexbox Left Column */
 .index-flex-left-column {
   flex: 30%;
-  background-color: var(--color-sidecol);
+  background-color: var(--color-leftcol);
   padding: 20px;
 }
 
 /* Flexbox Right Column */
 .index-flex-right-column {
   flex: 70%;
-  background-color: var(--color-maincol);
+  background-color: var(--color-rightcol);
   padding: 20px;
 }
 
@@ -78,12 +85,12 @@ nav a:hover {
 .img-lisa, 
 .img-lisa-book,
 .img-lisa-sax,
-.img-earth {
+.img-sloth{
   width: 70%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: block; 
   border: 5px solid purple;
 }
 
@@ -91,8 +98,8 @@ nav a:hover {
 .img-moe-phone {
   width: 30%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: block;
   border: 5px solid purple;
 }
