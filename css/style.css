@@ -1,0 +1,234 @@
+/* CSS Variables */
+:root {
+  --palette-dark: #522555;
+  --palette-meddark: #69306D;
+  --palette-med: #A5668B;
+  --palette-medlight: #D3BCC0;
+  --palette-light: #F2D7EE;
+  --hover-color: #F7A1C4;
+  --white: #ffffff;
+  --black: #000000;
+  --graylight: #e6d6d6;
+  --graydark: #6e6e69;
+
+  --color-header: var(--palette-light);
+  --color-sidecol: var(--palette-med);
+  --color-maincol: var(--palette-medlight);
+  --color-footer: var(--palette-light);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: var(--color-maincol);
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background-color: var(--color-header);
+  color: var(--black)
+}
+
+nav {
+  display: flex;
+  background-color: var(--palette-dark);
+}
+
+nav a {
+  color: var(--white);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: var(--hover-color);
+  color: var(--black)
+}
+
+/* Column Container */
+.index-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Sidebar (Left Column) */
+.index-flex-side-column {
+  flex: 30%;
+  background-color: var(--color-sidecol);
+  padding: 20px;
+}
+
+/* Main Column */
+.index-flex-main-column {
+  flex: 70%;
+  background-color: var(--color-maincol);
+  padding: 20px;
+}
+
+/* Non-Gallery Images */
+.img-lisa{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 5px solid purple;
+}
+
+.img-lisa-book{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 5px solid purple;
+}
+
+.img-lisa-sax{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 5px solid purple;
+}
+.img-earth{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 5px solid purple;
+}
+
+.img-red-button{
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 5px solid purple;
+}
+
+.img-moe-phone{
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 5px solid purple;
+}
+
+/* Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--color-footer)
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.footer-img-social-media {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+/********** Gallery Sloths **********/
+.gallery-sloths-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 4px;
+}
+
+.gallery-sloths-flex-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 4px 4px;
+}
+
+/* Gallery Images */
+.gallery-sloths-flex-column img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+
+  /* Colors */
+  background: var(--palette-med);
+}
+
+/* Optional Zoom On Hover*/
+.gallery-sloths-flex-column img:hover {
+  z-index: 9;
+  transform: scale(1.3);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.5s;
+  background-color: var(--hover-color);
+}
+
+/* Fullscreen Mode */
+.gallery-sloths-flex-column img.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fit;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-sloths-flex-column img.full:hover {
+  z-index: 999;
+  transform: none;
+}
+
+/********** Responsive Layout **********/
+/* Viewports More Than 768px */
+@media screen and (min-width: 769px) {
+
+  /* Flexbox Sloth Gallery 4 Per Row */
+  .gallery-sloths-flex-column {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+/* Viewports Less Than 768px */
+@media screen and (max-width: 768px) {
+
+  /* Flexbox Main Page: Stack The 2 Columns */
+  .index-flex-row {
+    flex-direction: column;
+  }
+
+  /* Flexbox Sloth Gallery 2 Per Row */
+  .gallery-sloths-flex-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Viewports Less Than 600px */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  /* Flexbox Sloth Gallery 1 Per Row */
+  .gallery-sloths-flex-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
