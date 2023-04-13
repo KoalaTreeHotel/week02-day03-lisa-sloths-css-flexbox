@@ -12,8 +12,8 @@
   --graydark: #6e6e69;
 
   --color-header: var(--palette-light);
-  --color-leftcol: var(--palette-med);
-  --color-rightcol: var(--palette-medlight);
+  --color-leftcolumn: var(--palette-med);
+  --color-rightcolumn: var(--palette-medlight);
   --color-footer: var(--palette-light);
   --color-nav: var(--palette-dark);
   --color-nav-hover: var(--palette-hover);
@@ -29,7 +29,7 @@
 body {
   font-family: "Montserrat", Helvetica, sans-serif;
   margin: 0;
-  background-color: var(--color-rightcol);
+  background-color: var(--color-rightcolumn);
 }
 
 p {
@@ -69,42 +69,31 @@ nav a:hover {
 
 /* Flexbox Left Column */
 .index-flex-left-column {
-  flex: 30%;
-  background-color: var(--color-leftcol);
+  flex: 50%;
+  background-color: var(--color-leftcolumn);
   padding: 20px;
 }
 
 /* Flexbox Right Column */
 .index-flex-right-column {
-  flex: 70%;
-  background-color: var(--color-rightcol);
+  flex: 50%;
+  background-color: var(--color-rightcolumn);
   padding: 20px;
 }
 
-.card {
-  width: 70%;
-  margin-bottom: 50px;
-}
-
 /* Non-Gallery Images */
-.img-lisa, 
+.img-lisa-flag, 
 .img-lisa-book,
 .img-lisa-sax,
-.img-sloth{
-  width: 100%;
+.img-sloth,
+.img-red-button, 
+.img-moe-phone {
+  width: 50%;
   height: auto;
   border: 5px solid purple; 
 }
 
-.img-red-button, 
-.img-moe-phone {
-  width: 30%;
-  height: auto;
-  /* margin-left: auto;
-  margin-right: auto; */
-  display: block;
-  border: 5px solid purple;
-}
+
 
 /* Footer */
 footer {
