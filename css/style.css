@@ -17,6 +17,7 @@
   --color-footer: var(--palette-light);
   --color-nav: var(--palette-dark);
   --color-nav-hover: var(--palette-hover);
+  --color-non-gallery-image-border: purple;
 }
 
 /* Google Font */
@@ -90,7 +91,7 @@ nav a:hover {
 .img-moe-phone {
   width: 50%;
   height: auto;
-  border: 5px solid purple; 
+  border: 5px solid var(--color-non-gallery-image-border); 
 }
 
 
